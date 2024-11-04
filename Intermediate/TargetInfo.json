@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "BattingCage",
+			"Path": "..\\Source\\BattingCage.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "BattingCageEditor",
+			"Path": "..\\Source\\BattingCageEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

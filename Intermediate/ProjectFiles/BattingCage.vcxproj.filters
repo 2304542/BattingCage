@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\BattingCage.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\BattingCage.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\BattingCageEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\BattingCage">
+      <UniqueIdentifier>{54EE8ED9-96B3-3A09-BC41-B9F2C0B09762}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\BattingCage\BatActor.cpp">
+      <Filter>Source\BattingCage</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BattingCage\BatActor.h">
+      <Filter>Source\BattingCage</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BattingCage\Batter.cpp">
+      <Filter>Source\BattingCage</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BattingCage\Batter.h">
+      <Filter>Source\BattingCage</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\BattingCage\BattingCage.Build.cs">
+      <Filter>Source\BattingCage</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\BattingCage\BattingCage.cpp">
+      <Filter>Source\BattingCage</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BattingCage\BattingCage.h">
+      <Filter>Source\BattingCage</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
