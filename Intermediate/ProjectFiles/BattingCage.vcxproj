@@ -67,7 +67,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
+<<<<<<< Updated upstream
     <ProjectGuid>{6A25A0E7-19F6-3B51-AE3D-A683BE8BFE3D}</ProjectGuid>
+=======
+    <ProjectGuid>{D4B01DC9-FCD8-390F-84FF-0F9B69514191}</ProjectGuid>
+>>>>>>> Stashed changes
     <RootNamespace>BattingCage</RootNamespace>
   </PropertyGroup>
   <Import Project="UECommon.props" />

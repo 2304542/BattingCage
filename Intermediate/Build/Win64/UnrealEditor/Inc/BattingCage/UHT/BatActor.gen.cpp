@@ -76,14 +76,23 @@ ABatActor::~ABatActor() {}
 // End Class ABatActor
 
 // Begin Registration
+<<<<<<< Updated upstream
 struct Z_CompiledInDeferFile_FID_Users_2304542_OneDrive___Abertay_University_Documents_GitHub_BattingCage_5_4_Source_BattingCage_BatActor_h_Statics
+=======
+struct Z_CompiledInDeferFile_FID_Users_2304542_Documents_Unreal_Projects_BattingCage_5_4_Source_BattingCage_BatActor_h_Statics
+>>>>>>> Stashed changes
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ABatActor, ABatActor::StaticClass, TEXT("ABatActor"), &Z_Registration_Info_UClass_ABatActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABatActor), 314521781U) },
 	};
 };
+<<<<<<< Updated upstream
 static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_2304542_OneDrive___Abertay_University_Documents_GitHub_BattingCage_5_4_Source_BattingCage_BatActor_h_2705884381(TEXT("/Script/BattingCage"),
 	Z_CompiledInDeferFile_FID_Users_2304542_OneDrive___Abertay_University_Documents_GitHub_BattingCage_5_4_Source_BattingCage_BatActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_2304542_OneDrive___Abertay_University_Documents_GitHub_BattingCage_5_4_Source_BattingCage_BatActor_h_Statics::ClassInfo),
+=======
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_2304542_Documents_Unreal_Projects_BattingCage_5_4_Source_BattingCage_BatActor_h_2705884381(TEXT("/Script/BattingCage"),
+	Z_CompiledInDeferFile_FID_Users_2304542_Documents_Unreal_Projects_BattingCage_5_4_Source_BattingCage_BatActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_2304542_Documents_Unreal_Projects_BattingCage_5_4_Source_BattingCage_BatActor_h_Statics::ClassInfo),
+>>>>>>> Stashed changes
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

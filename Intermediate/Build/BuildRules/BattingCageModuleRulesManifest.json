@@ -1,8 +1,14 @@
 {
 	"SourceFiles": [
+<<<<<<< Updated upstream
 		"C:\\Users\\2304542\\OneDrive - Abertay University\\Documents\\GitHub\\BattingCage 5.4\\Source\\BattingCage\\BattingCage.Build.cs",
 		"C:\\Users\\2304542\\OneDrive - Abertay University\\Documents\\GitHub\\BattingCage 5.4\\Source\\BattingCage.Target.cs",
 		"C:\\Users\\2304542\\OneDrive - Abertay University\\Documents\\GitHub\\BattingCage 5.4\\Source\\BattingCageEditor.Target.cs"
+=======
+		"C:\\Users\\2304542\\Documents\\Unreal Projects\\BattingCage 5.4\\Source\\BattingCage\\BattingCage.Build.cs",
+		"C:\\Users\\2304542\\Documents\\Unreal Projects\\BattingCage 5.4\\Source\\BattingCage.Target.cs",
+		"C:\\Users\\2304542\\Documents\\Unreal Projects\\BattingCage 5.4\\Source\\BattingCageEditor.Target.cs"
+>>>>>>> Stashed changes
 	],
 	"EngineVersion": "5.4.3"
 }
