@@ -67,7 +67,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{346D00FE-4C41-3C10-B385-DF3E2D5C872B}</ProjectGuid>
+    <ProjectGuid>{53628621-CCB8-3042-B270-803F3ECE5ADC}</ProjectGuid>
     <RootNamespace>BattingCage</RootNamespace>
   </PropertyGroup>
   <Import Project="UECommon.props" />
@@ -252,6 +252,8 @@
     <None Include="..\..\BattingCage.uproject"/>
     <None Include="..\..\Source\BattingCage.Target.cs"/>
     <None Include="..\..\Source\BattingCageEditor.Target.cs"/>
+    <None Include="..\..\.gitattributes"/>
+    <None Include="..\..\.gitignore"/>
     <None Include="..\..\.vsconfig"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini"/>
