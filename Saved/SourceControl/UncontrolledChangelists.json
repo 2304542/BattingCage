@@ -5,6 +5,8 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"C:/Users/jacke/Documents/GitHub/BattingCage/Content/ThirdPerson/Input/IMC_Default.uasset",
+				"C:/Users/jacke/Documents/GitHub/BattingCage/Content/ThirdPerson/Input/Actions/IA_Swing.uasset",
 				"C:/Users/2304542/OneDrive - Abertay University/Documents/Unreal Projects/BattingCage/Content/Characters/Mannequins/Animations/Manny/Baseball_Hit_Anim_mixamo_com1.uasset",
 				"C:/Users/2304542/OneDrive - Abertay University/Documents/Unreal Projects/BattingCage/Content/Mixamo/Baseball_Hit.uasset",
 				"C:/Users/2304542/OneDrive - Abertay University/Documents/Unreal Projects/BattingCage/Content/Mixamo/Baseball_Hit_Anim_mixamo_com.uasset",
