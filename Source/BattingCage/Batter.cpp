@@ -2,6 +2,17 @@
 
 
 #include "Batter.h"
+#include "EnhancedInputSubsystems.h"
+
+void ABatter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+{
+	APlayerController* PlayerController = Cast<APlayerController>(GetController());
+
+	UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer());
+
+	Subsystem->ClearAllMappings();
+	Subsystem->AddMappingContext(InputMapping, 0);
+}
 
 // Sets default values
 ABatter::ABatter()
@@ -29,6 +40,8 @@ void ABatter::Tick(float DeltaTime)
 void ABatter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
+
+	
 
 }
 
