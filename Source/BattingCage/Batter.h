@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "Batter.generated.h"
 
+
 UCLASS()
 class BATTINGCAGE_API ABatter : public ACharacter
 {
@@ -14,10 +15,12 @@ class BATTINGCAGE_API ABatter : public ACharacter
 public:
 	// Sets default values for this character's properties
 	ABatter();
+	void Swing();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
 
 public:	
 	// Called every frame
@@ -27,6 +30,7 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "EnhancedInput")
 	UInputMappingContext* InputMapping;
+	UInputAction* InputToSwing;
 };
 
 class UInputMappingContext;

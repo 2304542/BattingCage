@@ -3,6 +3,7 @@
 
 #include "Batter.h"
 #include "EnhancedInputSubsystems.h"
+#include "EnhancedInput/Public/EnhancedInputComponent.h"
 
 void ABatter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
@@ -36,10 +37,21 @@ void ABatter::Tick(float DeltaTime)
 
 }
 
+void ABatter::Swing() {
+	
+	
+
+}
+
 // Called to bind functionality to input
 void ABatter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
+	UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent);
+
+	PlayerInputComponent->BindAction("Swing", IE_Pressed, this, &ABatter::Swing);
+
+	EnhancedInputComponent->BindAction(InputToSwing, ETriggerEvent::Triggered, this, &ABatter::Swing);
+	
 
 	
 
