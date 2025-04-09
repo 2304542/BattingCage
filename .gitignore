@@ -45,6 +45,10 @@ Generated\ Files/
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
+# Crash Logs
+[Ss]aved/[Cc]onfig/[Cc]rash[Rr]eport[Cc]lient/
+[Ss]aved/[Cc]rashes/
+
 # NUnit
 *.VisualState.xml
 TestResult.xml
