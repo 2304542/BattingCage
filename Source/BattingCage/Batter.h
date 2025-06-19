@@ -15,7 +15,6 @@ class BATTINGCAGE_API ABatter : public ACharacter
 public:
 	// Sets default values for this character's properties
 	ABatter();
-	void Swing();
 
 protected:
 	// Called when the game starts or when spawned

@@ -2,18 +2,9 @@
 
 
 #include "Batter.h"
-#include "EnhancedInputSubsystems.h"
-#include "EnhancedInput/Public/EnhancedInputComponent.h"
+#include "BatActor.h"
 
-void ABatter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	APlayerController* PlayerController = Cast<APlayerController>(GetController());
 
-	UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer());
-
-	Subsystem->ClearAllMappings();
-	Subsystem->AddMappingContext(InputMapping, 0);
-}
 
 // Sets default values
 ABatter::ABatter()
@@ -37,23 +28,4 @@ void ABatter::Tick(float DeltaTime)
 
 }
 
-void ABatter::Swing() {
-	
-	
-
-}
-
-// Called to bind functionality to input
-void ABatter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent);
-
-	PlayerInputComponent->BindAction("Swing", IE_Pressed, this, &ABatter::Swing);
-
-	EnhancedInputComponent->BindAction(InputToSwing, ETriggerEvent::Triggered, this, &ABatter::Swing);
-	
-
-	
-
-}
 
