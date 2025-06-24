@@ -35,6 +35,12 @@
     <Filter Include="Source\BattingCage">
       <UniqueIdentifier>{54EE8ED9-96B3-3A09-BC41-B9F2C0B09762}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\BattingCage\BaseballActor.cpp">
+      <Filter>Source\BattingCage</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BattingCage\BaseballActor.h">
+      <Filter>Source\BattingCage</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\BattingCage\BatActor.cpp">
       <Filter>Source\BattingCage</Filter>
     </ClCompile>
