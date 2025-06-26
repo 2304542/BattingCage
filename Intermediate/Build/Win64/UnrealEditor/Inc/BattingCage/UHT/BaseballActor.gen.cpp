@@ -76,14 +76,14 @@ ABaseballActor::~ABaseballActor() {}
 // End Class ABaseballActor
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_2304542_Documents_GitHub_BattingCage_Source_BattingCage_BaseballActor_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_2304542_Documents_Unreal_BattingCage_Source_BattingCage_BaseballActor_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ABaseballActor, ABaseballActor::StaticClass, TEXT("ABaseballActor"), &Z_Registration_Info_UClass_ABaseballActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseballActor), 2092042982U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_2304542_Documents_GitHub_BattingCage_Source_BattingCage_BaseballActor_h_639433147(TEXT("/Script/BattingCage"),
-	Z_CompiledInDeferFile_FID_Users_2304542_Documents_GitHub_BattingCage_Source_BattingCage_BaseballActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_2304542_Documents_GitHub_BattingCage_Source_BattingCage_BaseballActor_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_2304542_Documents_Unreal_BattingCage_Source_BattingCage_BaseballActor_h_639433147(TEXT("/Script/BattingCage"),
+	Z_CompiledInDeferFile_FID_Users_2304542_Documents_Unreal_BattingCage_Source_BattingCage_BaseballActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_2304542_Documents_Unreal_BattingCage_Source_BattingCage_BaseballActor_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration
