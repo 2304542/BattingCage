@@ -27,8 +27,8 @@ ABaseballActor::ABaseballActor()
 	SphereComponent->InitSphereRadius(1.f);
 	SphereComponent->SetCollisionProfileName(TEXT("OverlapAll"));
 
-	SphereComponent->SetRelativeLocation(FVector(0.0f, 0.0f, 40.f));
-	SphereComponent->SetWorldScale3D(FVector(0.03f));
+	SphereComponent->SetRelativeLocation(FVector(0.0f, 0.0f, 0.0f));
+	SphereComponent->SetWorldScale3D(FVector(1.0f));
 }
 
 // Called when the game starts or when spawned
