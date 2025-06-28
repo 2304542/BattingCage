@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BATTINGCAGE_BaseballActor_generated_h
 
-#define FID_Users_2304542_Documents_Unreal_BattingCage_Source_BattingCage_BaseballActor_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_Users_2304542_Documents_GitHub_BattingCage_Source_BattingCage_BaseballActor_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABaseballActor(); \
 	friend struct Z_Construct_UClass_ABaseballActor_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(ABaseballActor)
 
 
-#define FID_Users_2304542_Documents_Unreal_BattingCage_Source_BattingCage_BaseballActor_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_Users_2304542_Documents_GitHub_BattingCage_Source_BattingCage_BaseballActor_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ABaseballActor(ABaseballActor&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~ABaseballActor();
 
 
-#define FID_Users_2304542_Documents_Unreal_BattingCage_Source_BattingCage_BaseballActor_h_9_PROLOG
-#define FID_Users_2304542_Documents_Unreal_BattingCage_Source_BattingCage_BaseballActor_h_12_GENERATED_BODY \
+#define FID_Users_2304542_Documents_GitHub_BattingCage_Source_BattingCage_BaseballActor_h_11_PROLOG
+#define FID_Users_2304542_Documents_GitHub_BattingCage_Source_BattingCage_BaseballActor_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_2304542_Documents_Unreal_BattingCage_Source_BattingCage_BaseballActor_h_12_INCLASS_NO_PURE_DECLS \
-	FID_Users_2304542_Documents_Unreal_BattingCage_Source_BattingCage_BaseballActor_h_12_ENHANCED_CONSTRUCTORS \
+	FID_Users_2304542_Documents_GitHub_BattingCage_Source_BattingCage_BaseballActor_h_14_INCLASS_NO_PURE_DECLS \
+	FID_Users_2304542_Documents_GitHub_BattingCage_Source_BattingCage_BaseballActor_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -48,7 +48,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> BATTINGCAGE_API UClass* StaticClass<class ABaseballActor>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_2304542_Documents_Unreal_BattingCage_Source_BattingCage_BaseballActor_h
+#define CURRENT_FILE_ID FID_Users_2304542_Documents_GitHub_BattingCage_Source_BattingCage_BaseballActor_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -9,6 +9,26 @@ ABaseballActor::ABaseballActor()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	StaticMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMeshComponent"));
+	RootComponent = StaticMeshComponent;
+
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> MeshAsset(TEXT("/Game/Assets/ball/Ball.Ball"));
+
+	if (MeshAsset.Succeeded())
+	{
+		StaticMeshComponent->SetStaticMesh(MeshAsset.Object);
+	}
+
+	StaticMeshComponent->SetCollisionProfileName(TEXT("OverlapAll"));
+
+	SphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("SphereCollider"));
+	SphereComponent->SetupAttachment(RootComponent);
+
+	SphereComponent->InitSphereRadius(1.f);
+	SphereComponent->SetCollisionProfileName(TEXT("OverlapAll"));
+
+	SphereComponent->SetRelativeLocation(FVector(0.0f, 0.0f, 40.f));
+	SphereComponent->SetWorldScale3D(FVector(0.03f));
 }
 
 // Called when the game starts or when spawned
@@ -16,6 +36,8 @@ void ABaseballActor::BeginPlay()
 {
 	Super::BeginPlay();
 	
+
+
 }
 
 // Called every frame

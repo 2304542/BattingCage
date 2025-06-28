@@ -9,7 +9,7 @@ ABatActor::ABatActor()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	//------------------------STATIC MESH RELATED CODE
+	
 	// Create the Static Mesh Component
 	StaticMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMeshComponent"));
 	RootComponent = StaticMeshComponent;
@@ -25,8 +25,8 @@ ABatActor::ABatActor()
 	StaticMeshComponent->SetCollisionProfileName(TEXT("OverlapAll"));
 
 
-	//------------------------SPHERE COLLISION RELATED CODE
-
+	
+	// sphere collision code 
 	SphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("SphereCollider"));
 	SphereComponent->SetupAttachment(RootComponent);
 
