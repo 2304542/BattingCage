@@ -6,6 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/SphereComponent.h"
+#include "GameFramework/ProjectileMovementComponent.h"
 #include "BaseballActor.generated.h"
 
 UCLASS()
@@ -32,5 +33,8 @@ public:
 	//Declaration of sphere collision
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	USphereComponent* SphereComponent;
+
+	UPROPERTY(VisibleAnywhere, Category = Movement) 
+	UProjectileMovementComponent* ProjectileMovementComponent;
 
 };

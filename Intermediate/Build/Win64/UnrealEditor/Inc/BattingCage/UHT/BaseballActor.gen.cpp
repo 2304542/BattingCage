@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseballActor() {}
 BATTINGCAGE_API UClass* Z_Construct_UClass_ABaseballActor();
 BATTINGCAGE_API UClass* Z_Construct_UClass_ABaseballActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_AActor();
+ENGINE_API UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_BattingCage();
@@ -56,9 +57,15 @@ struct Z_Construct_UClass_ABaseballActor_Statics
 		{ "ToolTip", "Declaration of sphere collision" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ProjectileMovementComponent_MetaData[] = {
+		{ "Category", "Movement" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "BaseballActor.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_StaticMeshComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SphereComponent;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ProjectileMovementComponent;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -68,9 +75,11 @@ struct Z_Construct_UClass_ABaseballActor_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseballActor_Statics::NewProp_StaticMeshComponent = { "StaticMeshComponent", nullptr, (EPropertyFlags)0x00100000000a000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseballActor, StaticMeshComponent), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StaticMeshComponent_MetaData), NewProp_StaticMeshComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseballActor_Statics::NewProp_SphereComponent = { "SphereComponent", nullptr, (EPropertyFlags)0x00100000000a000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseballActor, SphereComponent), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SphereComponent_MetaData), NewProp_SphereComponent_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseballActor_Statics::NewProp_ProjectileMovementComponent = { "ProjectileMovementComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseballActor, ProjectileMovementComponent), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ProjectileMovementComponent_MetaData), NewProp_ProjectileMovementComponent_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABaseballActor_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseballActor_Statics::NewProp_StaticMeshComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseballActor_Statics::NewProp_SphereComponent,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseballActor_Statics::NewProp_ProjectileMovementComponent,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseballActor_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABaseballActor_Statics::DependentSingletons[])() = {
@@ -113,10 +122,10 @@ ABaseballActor::~ABaseballActor() {}
 struct Z_CompiledInDeferFile_FID_Users_2304542_Documents_GitHub_BattingCage_Source_BattingCage_BaseballActor_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABaseballActor, ABaseballActor::StaticClass, TEXT("ABaseballActor"), &Z_Registration_Info_UClass_ABaseballActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseballActor), 3951416583U) },
+		{ Z_Construct_UClass_ABaseballActor, ABaseballActor::StaticClass, TEXT("ABaseballActor"), &Z_Registration_Info_UClass_ABaseballActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseballActor), 306913628U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_2304542_Documents_GitHub_BattingCage_Source_BattingCage_BaseballActor_h_875683275(TEXT("/Script/BattingCage"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_2304542_Documents_GitHub_BattingCage_Source_BattingCage_BaseballActor_h_2141799085(TEXT("/Script/BattingCage"),
 	Z_CompiledInDeferFile_FID_Users_2304542_Documents_GitHub_BattingCage_Source_BattingCage_BaseballActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_2304542_Documents_GitHub_BattingCage_Source_BattingCage_BaseballActor_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
