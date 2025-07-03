@@ -19,15 +19,15 @@ ABaseballActor::ABaseballActor()
 		StaticMeshComponent->SetStaticMesh(MeshAsset.Object);
 	}
 
-	StaticMeshComponent->SetCollisionProfileName(TEXT("OverlapAll"));
-
+	StaticMeshComponent->SetCollisionProfileName(TEXT("PhysicsActor"));
+	
 	SphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("SphereCollider"));
 	SphereComponent->SetupAttachment(RootComponent);
-
+	
 	SphereComponent->InitSphereRadius(1.f);
-	SphereComponent->SetCollisionProfileName(TEXT("OverlapAll"));
-
-	SphereComponent->SetRelativeLocation(FVector(0.0f, 0.0f, 0.0f));
+	//SphereComponent->SetCollisionProfileName(TEXT("PhysicsActor"));
+	
+	SphereComponent->SetRelativeLocation(FVector(0.0f, 0.0f, 1.0f));
 	SphereComponent->SetWorldScale3D(FVector(1.0f));
 
 	if (!ProjectileMovementComponent)
