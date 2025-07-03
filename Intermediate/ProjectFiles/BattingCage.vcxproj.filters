@@ -62,5 +62,11 @@
     <ClInclude Include="..\..\Source\BattingCage\BattingCage.h">
       <Filter>Source\BattingCage</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\BattingCage\TargetOuterActor.cpp">
+      <Filter>Source\BattingCage</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BattingCage\TargetOuterActor.h">
+      <Filter>Source\BattingCage</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -42,6 +42,7 @@ ABaseballActor::ABaseballActor()
 		ProjectileMovementComponent->Bounciness = 0.3f;
 		ProjectileMovementComponent->ProjectileGravityScale = 0.0f;
 	}
+	
 }
 
 // Called when the game starts or when spawned
