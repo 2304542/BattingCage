@@ -2,6 +2,7 @@
 
 
 #include "BaseballActor.h"
+#include "Batter.h"
 
 // Sets default values
 ABaseballActor::ABaseballActor()
@@ -11,14 +12,14 @@ ABaseballActor::ABaseballActor()
 
 	StaticMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMeshComponent"));
 	RootComponent = StaticMeshComponent;
-
+	
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> MeshAsset(TEXT("/Game/Assets/ball/Ball.Ball"));
-
+	
 	if (MeshAsset.Succeeded())
 	{
 		StaticMeshComponent->SetStaticMesh(MeshAsset.Object);
 	}
-
+	
 	StaticMeshComponent->SetCollisionProfileName(TEXT("PhysicsActor"));
 	
 	SphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("SphereCollider"));
@@ -30,18 +31,7 @@ ABaseballActor::ABaseballActor()
 	SphereComponent->SetRelativeLocation(FVector(0.0f, 0.0f, 1.0f));
 	SphereComponent->SetWorldScale3D(FVector(1.0f));
 
-	if (!ProjectileMovementComponent)
-	{
-		// Use this component to drive this projectile's movement.
-		ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovementComponent"));
-		ProjectileMovementComponent->SetUpdatedComponent(SphereComponent);
-		ProjectileMovementComponent->InitialSpeed = 3000.0f;
-		ProjectileMovementComponent->MaxSpeed = 3000.0f;
-		ProjectileMovementComponent->bRotationFollowsVelocity = true;
-		ProjectileMovementComponent->bShouldBounce = true;
-		ProjectileMovementComponent->Bounciness = 0.3f;
-		ProjectileMovementComponent->ProjectileGravityScale = 0.0f;
-	}
+	
 	
 }
 
@@ -51,13 +41,27 @@ void ABaseballActor::BeginPlay()
 	Super::BeginPlay();
 	
 
+	float speed = 200.0f;
+	ABatter* myBatter = (ABatter*)UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
+	myBatter->GetActorLocation();
 
+	ABaseballActor* myBaseball = (ABaseballActor*)UGameplayStatics::GetActorOfClass(this, ABaseballActor::StaticClass());
+	myBaseball->GetActorLocation();
+
+	FVector dir = (myBaseball->GetActorLocation() - myBatter->GetActorLocation());
+	dir.Normalize();
+	//myBaseball->GetComponentByClass<UPrimitiveComponent>()->AddImpulse(FVector(-dir.X, dir.Y, dir.Z));
+
+	float VerticalVelocity = GetVelocity().Z;
+
+
+	
 }
 
 // Called every frame
 void ABaseballActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	
 }
 

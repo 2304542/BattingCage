@@ -23,9 +23,7 @@ void ATargetOuterActor::BeginPlay()
 void ATargetOuterActor::ActorBeginOverlap() {
 	UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
 
-	//if (MyBatter != nullptr) {
-	//	score++;
-	//}
+	
 	
 }
 // Called every frame

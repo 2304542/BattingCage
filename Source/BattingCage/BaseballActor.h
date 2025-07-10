@@ -7,6 +7,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Components/SphereComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+#include "Kismet/GameplayStatics.h"
 #include "BaseballActor.generated.h"
 
 UCLASS()
@@ -34,7 +35,5 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	USphereComponent* SphereComponent;
 
-	UPROPERTY(VisibleAnywhere, Category = Movement) 
-	UProjectileMovementComponent* ProjectileMovementComponent;
 
 };
