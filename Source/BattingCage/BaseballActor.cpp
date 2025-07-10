@@ -41,17 +41,17 @@ void ABaseballActor::BeginPlay()
 	Super::BeginPlay();
 	
 
-	float speed = 200.0f;
+	float speed = 5000.f;
 	ABatter* myBatter = (ABatter*)UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
 	myBatter->GetActorLocation();
 
-	ABaseballActor* myBaseball = (ABaseballActor*)UGameplayStatics::GetActorOfClass(this, ABaseballActor::StaticClass());
-	myBaseball->GetActorLocation();
 
-	FVector dir = (myBaseball->GetActorLocation() - myBatter->GetActorLocation());
+
+	FVector dir = (GetActorLocation() - myBatter->GetActorLocation());
 	dir.Normalize();
-	//myBaseball->GetComponentByClass<UPrimitiveComponent>()->AddImpulse(FVector(-dir.X, dir.Y, dir.Z));
-
+	GetComponentByClass<UPrimitiveComponent>()->AddForce(FVector(-dir.X, dir.Y, dir.Z) * speed);
+	GetComponentByClass<UPrimitiveComponent>()->AddImpulse(FVector(-dir.X, dir.Y, dir.Z) * speed);
+	
 	float VerticalVelocity = GetVelocity().Z;
 
 
