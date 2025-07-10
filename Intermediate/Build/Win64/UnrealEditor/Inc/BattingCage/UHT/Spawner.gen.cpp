@@ -37,15 +37,33 @@ struct Z_Construct_UClass_ASpawner_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BaseballObject_MetaData[] = {
 		{ "Category", "Spawner" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// pointer to baseball object \n" },
+#endif
 		{ "ModuleRelativePath", "Spawner.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "pointer to baseball object" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_position_MetaData[] = {
 		{ "Category", "Baseball" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// spawn point of ball made editable in blueprints \n" },
+#endif
 		{ "ModuleRelativePath", "Spawner.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "spawn point of ball made editable in blueprints" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_rotation_MetaData[] = {
 		{ "Category", "Baseball" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// rotation of ball \n" },
+#endif
 		{ "ModuleRelativePath", "Spawner.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "rotation of ball" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FClassPropertyParams NewProp_BaseballObject;
@@ -104,14 +122,14 @@ ASpawner::~ASpawner() {}
 // End Class ASpawner
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_2304542_Documents_GitHub_BattingCage_Source_BattingCage_Spawner_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_2304542_OneDrive___Abertay_University_Documents_BattingCage_BattingCage_Source_BattingCage_Spawner_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASpawner, ASpawner::StaticClass, TEXT("ASpawner"), &Z_Registration_Info_UClass_ASpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASpawner), 564566635U) },
+		{ Z_Construct_UClass_ASpawner, ASpawner::StaticClass, TEXT("ASpawner"), &Z_Registration_Info_UClass_ASpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASpawner), 3229846773U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_2304542_Documents_GitHub_BattingCage_Source_BattingCage_Spawner_h_2768500211(TEXT("/Script/BattingCage"),
-	Z_CompiledInDeferFile_FID_Users_2304542_Documents_GitHub_BattingCage_Source_BattingCage_Spawner_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_2304542_Documents_GitHub_BattingCage_Source_BattingCage_Spawner_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_2304542_OneDrive___Abertay_University_Documents_BattingCage_BattingCage_Source_BattingCage_Spawner_h_3100561922(TEXT("/Script/BattingCage"),
+	Z_CompiledInDeferFile_FID_Users_2304542_OneDrive___Abertay_University_Documents_BattingCage_BattingCage_Source_BattingCage_Spawner_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_2304542_OneDrive___Abertay_University_Documents_BattingCage_BattingCage_Source_BattingCage_Spawner_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

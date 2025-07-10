@@ -31,10 +31,10 @@ ABatActor::ABatActor()
 	SphereComponent->SetupAttachment(RootComponent);
 
 	SphereComponent->InitSphereRadius(1.f);
-	SphereComponent->SetCollisionProfileName(TEXT("OverlapAll"));
+	SphereComponent->SetCollisionProfileName(TEXT("BlockAll"));
 
 	SphereComponent->SetRelativeLocation(FVector(0.0f, 0.0f, 40.f));
-	SphereComponent->SetWorldScale3D(FVector(0.03f));
+	SphereComponent->SetWorldScale3D(FVector(2.0f));
 }
 
 // Called when the game starts or when spawned

@@ -16,7 +16,7 @@ void ASpawner::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	GetWorld()->SpawnActor<AActor>(BaseballObject, position, FRotator(rotation.X, rotation.Y, rotation.Z), FActorSpawnParameters());
+	GetWorld()->SpawnActor<AActor>(BaseballObject, position, FRotator(rotation.X, rotation.Y, rotation.Z), FActorSpawnParameters()); // spawns baseball actor 
 }
 
 // Called every frame

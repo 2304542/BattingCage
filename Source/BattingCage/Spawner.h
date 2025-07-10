@@ -23,13 +23,13 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditDefaultsOnly) // pointer to baseball object 
 	TSubclassOf<AActor> BaseballObject;
 
-	UPROPERTY(EditAnywhere, Category=Baseball)
+	UPROPERTY(EditAnywhere, Category=Baseball) // spawn point of ball made editable in blueprints 
 	FVector position;
 
-	UPROPERTY(EditAnywhere, Category = Baseball)
+	UPROPERTY(EditAnywhere, Category = Baseball) // rotation of ball 
 	FVector rotation;
 
 };

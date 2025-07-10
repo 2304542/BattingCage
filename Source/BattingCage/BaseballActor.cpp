@@ -47,12 +47,13 @@ void ABaseballActor::BeginPlay()
 
 
 
-	FVector dir = (GetActorLocation() - myBatter->GetActorLocation());
+	FVector dir = (GetActorLocation() - myBatter->GetActorLocation()); 
 	dir.Normalize();
-	GetComponentByClass<UPrimitiveComponent>()->AddForce(FVector(-dir.X, dir.Y, dir.Z) * speed);
-	GetComponentByClass<UPrimitiveComponent>()->AddImpulse(FVector(-dir.X, dir.Y, dir.Z) * speed);
+	// ball trajectory (note: negative x direction is towards the player and z is up) 
+	GetComponentByClass<UPrimitiveComponent>()->AddForce(FVector(-dir.X, dir.Y, dir.Z));
+	GetComponentByClass<UPrimitiveComponent>()->AddImpulse(FVector(dir.X, dir.Y, dir.Z));
+	GetComponentByClass<UPrimitiveComponent>()->SetPhysicsLinearVelocity(FVector(-5000.0f, 0.0f, 3500.0f), true, NAME_None);
 	
-	float VerticalVelocity = GetVelocity().Z;
 
 
 	
