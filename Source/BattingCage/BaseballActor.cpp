@@ -21,7 +21,7 @@ ABaseballActor::ABaseballActor()
 	}
 	
 	StaticMeshComponent->SetCollisionProfileName(TEXT("PhysicsActor"));
-	
+
 	SphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("SphereCollider"));
 	SphereComponent->SetupAttachment(RootComponent);
 	
@@ -49,10 +49,11 @@ void ABaseballActor::BeginPlay()
 
 	FVector dir = (GetActorLocation() - myBatter->GetActorLocation()); 
 	dir.Normalize();
-	// ball trajectory (note: negative x direction is towards the player and z is up) 
+	// ball trajectory (note: negative x direction is towards the player and z is up)
+	SetLifeSpan(5.0f);
 	GetComponentByClass<UPrimitiveComponent>()->AddForce(FVector(-dir.X, dir.Y, dir.Z));
 	GetComponentByClass<UPrimitiveComponent>()->AddImpulse(FVector(dir.X, dir.Y, dir.Z));
-	GetComponentByClass<UPrimitiveComponent>()->SetPhysicsLinearVelocity(FVector(-5000.0f, 0.0f, 3500.0f), true, NAME_None);
+	GetComponentByClass<UPrimitiveComponent>()->SetPhysicsLinearVelocity(FVector(-1000.0f, 0.0f, 0.0f), true, NAME_None);
 	
 
 
