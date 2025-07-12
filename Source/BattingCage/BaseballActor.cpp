@@ -17,11 +17,11 @@ ABaseballActor::ABaseballActor()
 	
 	if (MeshAsset.Succeeded())
 	{
-		StaticMeshComponent->SetStaticMesh(MeshAsset.Object);
+		StaticMeshComponent->SetStaticMesh(MeshAsset.Object); 
 	}
 	
 	StaticMeshComponent->SetCollisionProfileName(TEXT("PhysicsActor"));
-
+	StaticMeshComponent->SetRelativeScale3D(FVector(20.0f)); // size of ball 
 	SphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("SphereCollider"));
 	SphereComponent->SetupAttachment(RootComponent);
 	
@@ -29,7 +29,7 @@ ABaseballActor::ABaseballActor()
 	//SphereComponent->SetCollisionProfileName(TEXT("PhysicsActor"));
 	
 	SphereComponent->SetRelativeLocation(FVector(0.0f, 0.0f, 1.0f));
-	SphereComponent->SetWorldScale3D(FVector(1.0f));
+	SphereComponent->SetWorldScale3D(FVector(1.0f)); // collision component of ball 
 
 	
 	
@@ -41,19 +41,20 @@ void ABaseballActor::BeginPlay()
 	Super::BeginPlay();
 	
 
-	float speed = 5000.f;
-	ABatter* myBatter = (ABatter*)UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
+	
+	ABatter* myBatter = (ABatter*)UGameplayStatics::GetPlayerCharacter(GetWorld(), 0); // gets location of batter for direction vector
 	myBatter->GetActorLocation();
 
 
 
 	FVector dir = (GetActorLocation() - myBatter->GetActorLocation()); 
-	dir.Normalize();
-	// ball trajectory (note: negative x direction is towards the player and z is up)
-	SetLifeSpan(5.0f);
-	GetComponentByClass<UPrimitiveComponent>()->AddForce(FVector(-dir.X, dir.Y, dir.Z));
+	dir.Normalize(); // normalizes direction vector
+	// ball trajectory (note: negative x direction is towards the player)
+	GetComponentByClass<UPrimitiveComponent>()->SetSimulatePhysics(true); // must be true in order for ball to move
+	SetLifeSpan(10.0f); // number of seconds before ball is despawned
+	GetComponentByClass<UPrimitiveComponent>()->AddForce(FVector(-dir.X, dir.Y, dir.Z)); // allows ball to roll
 	GetComponentByClass<UPrimitiveComponent>()->AddImpulse(FVector(dir.X, dir.Y, dir.Z));
-	GetComponentByClass<UPrimitiveComponent>()->SetPhysicsLinearVelocity(FVector(-1000.0f, 0.0f, 0.0f), true, NAME_None);
+	GetComponentByClass<UPrimitiveComponent>()->SetPhysicsLinearVelocity(FVector(-1000.0f, 0.0f, 0.0f), true, NAME_None); // ball moves towards player
 	
 
 
